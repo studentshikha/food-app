@@ -3,6 +3,7 @@
 import ResturantCart from "./ResturantCart";
 
 import { useState , useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -45,12 +46,17 @@ const Body = () => {
             setListOfResturants(filtered);
           
            }}
-        >top resturants</button>
+        >  Rating 4.5+</button>
        </div>
 
        <div className="res-container">
          {listOfResturants.map((resturant) => (
-           <ResturantCart key={resturant.info.id} resData={resturant} />
+           <Link
+           key={ resturant.info.id}
+            to={"/resturants/" + resturant.info.id}> 
+           <ResturantCart resData={resturant} /> 
+           </Link> 
+         
          )) 
          }
  

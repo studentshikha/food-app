@@ -1,4 +1,4 @@
-import {RES_URL} from "../utils/constant";
+import {RESCART_URL} from "../utils/constant";
 
 const ResturantCart = ({ resData }) => {
     //  const {resName , cuision, rating, time } = props;
@@ -9,7 +9,7 @@ const ResturantCart = ({ resData }) => {
       <div className="res-cart">
         <img alt="res-cart"
           className="res-image"
-          src={  RES_URL  
+          src={  RESCART_URL  
              +
             cloudinaryImageId
           }
